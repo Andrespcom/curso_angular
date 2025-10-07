@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Habilita solo estos temas de daisyUI */
+@plugin "daisyui" {
+  themes: forest, dracula, emerald;
+}
+
+/* Fuentes locales (mejor .woff2). Declara cada peso que vayas a usar */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Medium.ttf") format("trueformat");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* añade Bold si lo necesitas (700) */
+
+/* Haz que Tailwind use Montserrat como sans por defecto */
+@theme inline {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Animación fadeIn con Tailwind v4 */
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+/* Úsala así: class="animate-[fadeIn_0.3s_ease-in-out]" */
+/* o crea una utilidad propia: */
+@utility animate-fade-in { animation: fadeIn 1.3s ease-in-out }

@@ -1,0 +1,67 @@
+<section class="mx-5 mb-5">
+  <h1 class="text-2xl font-bold">Pipes Raros</h1>
+  <h3 class="text-xl font-thin">Pipes en Angular</h3>
+</section>
+
+<app-card title="i18nSelect">
+  <p>
+    Saludos a {{ client().name }}, es un placer
+    {{ client().gender | i18nSelect : invitationMap }} al evento
+  </p>
+  <button class="btn btn-primary" (click)="changeClient()">Cambiar el cliente</button>
+</app-card>
+
+<app-card title="i18nPlural">
+  <p>Actualmente {{ clients().length | i18nPlural : clientsMap() }}</p>
+  <button [disabled]="clients().length == 0" class="btn btn-primary" (click)="deleteClient()">
+    Eliminar cliente de la lista
+  </button>
+</app-card>
+
+<app-card title="slicePipe">
+  <b>Original</b>
+  <p class="text-primary">{{ clients().join(', ') }}</p>
+
+  <b class="mt-2">Slice 0-3:</b>
+  <p class="text-primary">{{ clients() | slice : 0 : 3 }}</p>
+  <b class="mt-2">Slice 1-3:</b>
+  <p class="text-primary">{{ clients() | slice : 1 : 3 }}</p>
+  <b class="mt-2">Slice 3-6:</b>
+  <p class="text-primary">{{ clients() | slice : 3 : 6 }}</p>
+</app-card>
+
+<app-card title="JSONPipe">
+  <pre class="text-primary">{{ clients() | json }}</pre>
+  <pre class="text-primary">{{ client() | json }}</pre>
+  <p class="text-primary">{{ clients().join(', ') | json | uppercase }}</p>
+</app-card>
+
+<app-card title="keyValuePipe">
+  <pre>{{ profile | keyvalue | json }}</pre>
+  @for (item of profile| keyvalue; track $index) {
+  <span>
+    <strong class="text-primary">{{ item.key | titlecase }}</strong>
+    :
+    {{ item.value }}
+  </span>
+  }
+</app-card>
+
+<app-card title="Async Pipe">
+  <p class="text-primary">{{ promiseValue | async }}</p>
+  @if (promiseValue| async; as value) {
+    <p class="text-primary">{{value}}</p>
+  }@else{
+    <p>Cargando</p>
+  }
+
+  <h3 class="text-2xl">Observable</h3>
+  <p>{{myObservableTimer|async}}</p>
+
+  @if (myObservableTimer|async; as value) {
+    <p>Valor: {{value}}</p>
+  }
+  @else {
+    <p>Esperando el primer valor . . .</p>
+  }
+</app-card>

@@ -1,0 +1,8 @@
+<country-list [countries]="[]"></country-list>
+
+<!--  -->
+@if (countryResource.error()) {
+<app-not-found></app-not-found>
+} @if (countryResource.hasValue()) {
+    <app-country-information [country]="countryResource.value()!"></app-country-information>
+}
