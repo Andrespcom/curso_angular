@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* ===== Base: resets mínimos y tokens de tema ===== */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  :root { color-scheme: light dark; }
+
+  body {
+    @apply m-0 p-0 bg-base-200 text-base-content font-sans;
+  }
+
+  h1, h2 { @apply font-semibold mb-4; }
+}
+
+/* ===== Componentes: usa utilidades y tokens en lugar de hex ===== */
+@layer components {
+  /* Contenedor de página */
+  .page {
+    @apply max-w-[700px] mx-auto my-8 p-6 bg-base-100 rounded-2xl shadow;
+  }
+
+  /* Shell / Navbar simple (si no usas la navbar de daisyUI) */
+  .shell {
+    @apply bg-base-100 border-b border-base-300 px-6 py-3 flex items-center justify-between;
+  }
+
+  .nav a {
+    @apply no-underline text-base-content/60 font-medium;
+  }
+  .nav a.active {
+    @apply text-base-content border-b-2 border-primary;
+  }
+
+  /* Listado de gastos */
+  .gastos {
+    @apply grid gap-2 list-none m-0 p-0;
+  }
+  .gasto {
+    @apply grid grid-cols-[1fr_auto_auto] items-center bg-base-200 rounded-lg px-3 py-2;
+  }
+  .gasto:hover { @apply bg-primary/10; }
+  .gasto span:last-child { @apply font-semibold text-primary; }
+
+  /* Total / stats */
+  .stats {
+    @apply text-base font-medium text-base-content pt-2 border-t border-base-300;
+  }
+}
+.menu::before, .menu::after { display: none !important; }

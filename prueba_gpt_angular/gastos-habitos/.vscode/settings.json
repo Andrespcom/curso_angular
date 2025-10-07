@@ -1,0 +1,4 @@
+{
+  "files.associations": { "*.css": "postcss" },
+  "tailwindCSS.emmetCompletions": true
+}

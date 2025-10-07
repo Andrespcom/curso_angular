@@ -1,0 +1,12 @@
+{
+  "gastos": [
+    { "id": "g1", "concepto": "Supermercado", "categoria": "comida", "importe": 42.50, "fechaISO": "2025-10-01" },
+    { "id": "g2", "concepto": "Metro", "categoria": "transporte", "importe": 2.10, "fechaISO": "2025-10-02" },
+    { "id": "g3", "concepto": "Cine", "categoria": "ocio", "importe": 9.50, "fechaISO": "2025-10-03" },
+    { "id": "g4", "concepto": "Teatro", "categoria": "ocio", "importe": 19.50, "fechaISO": "2025-12-03" }
+  ],
+  "habitos": [
+    { "id": "h1", "nombre": "Beber agua", "activo": true,  "racha": 5, "actualizadoISO": "2025-10-06" },
+    { "id": "h2", "nombre": "Leer 20 min", "activo": false, "racha": 2, "actualizadoISO": "2025-10-05" }
+  ]
+}

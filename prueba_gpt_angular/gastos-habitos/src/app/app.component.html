@@ -1,0 +1,38 @@
+<header class="shell">
+  <a routerLink="/" class="brand" aria-label="Inicio">
+    <img ngSrc="/assets/logo.svg" width="28" height="28" alt="" />
+    <span>Gastos & Hábitos</span>
+  </a>
+
+  <nav class="nav" role="navigation" aria-label="Secciones">
+    @if (authStore.isLoggedIn()) {
+    <button (click)="logout()">Salir</button>
+    } @else {
+    <button (click)="login()">Entrar</button>
+    }
+
+    <a
+      routerLink="/gastos"
+      #rlaG="routerLinkActive"
+      routerLinkActive="active"
+      [attr.aria-current]="rlaG.isActive ? 'page' : null"
+      >Gastos</a
+    >
+
+    <a
+      routerLink="/habitos"
+      #rlaH="routerLinkActive"
+      routerLinkActive="active"
+      [attr.aria-current]="rlaH.isActive ? 'page' : null"
+      >Hábitos</a
+    >
+  </nav>
+
+  @if (isLoading()) {
+  <div class="loader" role="status" aria-live="polite">Cargando…</div>
+  }
+</header>
+
+<main class="main">
+  <router-outlet />
+</main>
