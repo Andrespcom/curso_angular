@@ -1,0 +1,237 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> displays site properly based on user's device 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Bento grid</title>
+
+  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  Social Media 10x Faster with AI
+  Over 4,000 5-star reviews
+
+  Manage multiple accounts and platforms.
+
+  Maintain a consistent posting schedule.
+
+  Schedule to social media.
+  Optimize post timings to publish content at the perfect time for your audience.
+  
+  Grow followers with non-stop content.
+
+  >56% faster audience growth
+  
+  Create and schedule content quicker.
+
+  Write your content using AI.
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bento grid – setup mínimo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+/* ---- Reset corto + tokens ---- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Manrope,system-ui,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;background:#eef2f5;color:#0f172a}
+img{max-width:100%;display:block;height:auto}
+
+
+:root{
+/* Colores aproximados del mock */
+--bg:#eef2f5; /* gris del canvas */
+--card:#ffffff; /* tarjeta base */
+--text:#0f172a; /* texto principal */
+--muted:#475569; /* texto secundario */
+--purple:#6d4ae6; /* bloques morados */
+--lilac:#dcd3ff; /* columna derecha */
+--peach:#ffe6d2; /* left top */
+--yellow:#ffd166; /* cards amarillas */
+--radius:20px;
+--shadow:0 10px 30px rgba(2,6,23,.08);
+--container:1160px; /* ancho máx de la maqueta */
+--space:clamp(12px,2vw,24px);
+--gap:clamp(10px,1.6vw,18px);
+--fs-100:clamp(.95rem,.9rem + .3vw,1.05rem);
+--fs-200:clamp(1.1rem,1rem + .6vw,1.35rem);
+--fs-300:clamp(1.4rem,1.2rem + 1vw,1.9rem);
+--fs-400:clamp(1.8rem,1.4rem + 1.6vw,2.6rem);
+}
+
+
+.frame{max-width:calc(var(--container) + 2*var(--space));margin:40px auto;padding:var(--space);background:var(--card);border-radius:28px;box-shadow:var(--shadow)}
+.bento{display:grid;gap:var(--gap);grid-template-columns:1fr;grid-template-areas:
+"hero"
+"schedule"
+"create"
+"write"
+"manage"
+"maintain"
+"growth"
+"stats"
+"cta";
+}
+
+
+/* Desktop: 4 columnas tipo bento */
+@media (min-width: 1000px){
+.bento{
+grid-template-columns: repeat(4, 1fr);
+grid-auto-rows: 1fr;
+grid-template-areas:
+/* row 1 */
+"create hero hero schedule"
+/* row 2 */
+"create manage maintain schedule"
+/* row 3 */
+"write growth stats stats"
+/* row 4 */
+"write cta cta cta";
+}
+}
+
+
+/* Tiles base */
+.tile{background:var(--card);border-radius:var(--radius);padding:clamp(16px,2.2vw,28px);box-shadow:var(--shadow);display:grid;gap:.6rem}
+.tile h2{margin:0;font-size:var(--fs-300);letter-spacing:-.02em}
+.tile p{margin:0;color:var(--muted);font-size:var(--fs-100)}
+
+
+/* Variantes por área (solo color y tamaño tipográfico leve) */
+.hero{grid-area:hero;background:var(--purple);color:#fff}
+.hero h2{font-size:var(--fs-400)}
+
+
+.schedule{grid-area:schedule;background:var(--lilac)}
+.create{grid-area:create;background:var(--peach)}
+.write{grid-area:write;background:#ffcd6b}
+.maintain{grid-area:maintain;background:#ffc857}
+.manage{grid-area:manage}
+.growth{grid-area:growth}
+.stats{grid-area:stats;background:var(--purple);color:#fff}
+.cta{grid-area:cta;background:var(--purple);color:#fff}
+
+
+/* Botón base para placeholders */
+.btn{display:inline-grid;place-items:center;border:0;border-radius:999px;padding:.7rem 1rem;background:#ffef9f;color:#1f2937;font-weight:700;cursor:pointer}
+</style>
+</head>
+<body>
+<main class="frame">
+GRID principal 
+<section class="bento" aria-label="Bento grid">
+<article class="tile create">
+<h2>Create and schedule content <em>quicker</em>.</h2>
+<button class="btn">Create Post</button>
+</article>
+
+
+<article class="tile hero">
+<h2>Social Media <strong>10×</strong> Faster with AI</h2>
+</html> -->
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bento grid – Tailwind setup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--bg:#eef2f5;--purple:#6d4ae6;--lilac:#e1d8ff;--peach:#ffe6d2;--yellow:#ffd166}
+html,body{height:100%}
+body{font-family: Manrope, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg)}
+</style>
+</head>
+<body>
+<main class="max-w-[1160px] mx-auto my-10 p-4 lg:p-6 bg-white rounded-[28px] shadow-xl">
+<!-- GRID -->
+<section class="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-5 auto-rows-fr">
+
+
+<!-- Create (izq arriba). En móvil va al final -->
+<article class="order-9 lg:order-none bg-[var(--peach)] rounded-2xl shadow-md p-6 lg:p-7 lg:col-start-1 lg:row-start-1 lg:row-span-2">
+<h2 class="text-xl lg:text-2xl font-extrabold leading-tight text-slate-900">Create and schedule content <span class="italic">quicker</span>.</h2>
+<button class="mt-6 inline-flex items-center gap-2 bg-[#ffd166] text-slate-900 font-bold rounded-full px-5 py-2 shadow">Create Post</button>
+</article>
+
+
+<!-- Hero (centro 2 cols) -->
+<article class="bg-[var(--purple)] text-white rounded-2xl shadow-md p-7 lg:p-9 lg:col-start-2 lg:col-span-2 lg:row-start-1 lg:row-span-2">
+<h2 class="text-3xl lg:text-5xl font-extrabold leading-tight">Social Media <span class="text-yellow-300">10×</span> Faster with AI</h2>
+<p class="mt-3 opacity-90">Over 4,000 5‑star reviews</p>
+</article>
+
+
+<!-- Schedule (col derecha alta) -->
+<article class="bg-[var(--lilac)] rounded-2xl shadow-md p-6 lg:p-7 lg:col-start-4 lg:row-start-1 lg:row-span-3">
+<h2 class="text-xl lg:text-2xl font-extrabold leading-tight text-slate-900">Schedule to social media.</h2>
+<p class="mt-3 text-slate-600">Optimize post timings for your audience.</p>
+</article>
+
+
+<!-- Manage (blanca pequeña) -->
+<article class="bg-white rounded-2xl shadow-md p-6 lg:p-7 lg:col-start-2 lg:row-start-3">
+<h2 class="text-xl font-extrabold text-slate-900 leading-tight">Manage multiple accounts and platforms.</h2>
+</article>
+
+
+<!-- Maintain (amarilla pequeña) -->
+<article class="bg-[var(--yellow)] rounded-2xl shadow-md p-6 lg:p-7 lg:col-start-3 lg:row-start-3">
+<h2 class="text-xl font-extrabold text-slate-900 leading-tight">Maintain a consistent posting schedule.</h2>
+</article>
+
+
+<!-- Write (izq baja y alta). En móvil va penúltima -->
+<article class="order-8 lg:order-none bg-[#ffcd6b] rounded-2xl shadow-md p-6 lg:p-7 lg:col-start-1 lg:row-start-3 lg:row-span-2">
+<h2 class="text-xl lg:text-2xl font-extrabold leading-tight text-slate-900">Write your content using AI.</h2>
+</article>
+
+
+<!-- Growth (blanca pequeña) -->
+<article class="bg-white rounded-2xl shadow-md p-6 lg:p-7 lg:col-start-2 lg:row-start-4">
+<h2 class="text-xl font-extrabold text-slate-900 leading-tight">&gt;56% faster audience growth</h2>
+</article>
+
+
+<!-- Stats (morado 2 cols) -->
+<article class="bg-[var(--white)] text-white rounded-2xl shadow-md p-6 lg:p-7 lg:col-start-3 lg:col-span-1 lg:row-start-4">
+<h2 class="text-2xl font-extrabold leading-tight">Follower Growth 20,642</h2>
+<p class="opacity-90">Followers 89,532</p>
+</article>
+
+
+<!-- CTA (morado ancho 3 cols abajo) -->
+<article class="bg-[var(--purple)] text-white rounded-2xl shadow-md p-7 lg:p-9 lg:col-start-3 lg:col-span-2 lg:row-start-4">
+<h2 class="text-2xl lg:text-4xl font-extrabold leading-tight text-right">Grow followers with non‑stop content.</h2>
+</article>
+
+
+</section>
+</main>
+</body>
+</html>
